@@ -25,6 +25,8 @@ public abstract class Produto {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-
+    
+    public void exibirInformacoes();
+    
     public abstract double calcularValor();
 }
