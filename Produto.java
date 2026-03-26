@@ -4,6 +4,7 @@ public abstract class Produto {
     protected String nome;
     protected double preco;
     protected int quantidade;
+    protected String unidadeMedida;
 
     public Produto(String nome, double preco, int quantidade) {
         this.nome = nome;
@@ -26,7 +27,11 @@ public abstract class Produto {
         this.quantidade = quantidade;
     }
     
-    public void exibirInformacoes();
+    public void exibirInformacoes(){
+        System.out.println("Nome: " + nome);
+        System.out.println("Quantidade: " + quantidade);
+        System.out.println("Preço: R$ " + preco);
+    }    
     
     public abstract double calcularValor();
 }
