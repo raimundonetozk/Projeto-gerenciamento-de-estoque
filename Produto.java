@@ -4,15 +4,16 @@ public abstract class Produto {
     protected String nome;
     protected double preco;
     protected int quantidade;
-    protected String unidadeMedida;
 
+    
     public Produto(String nome, double preco, int quantidade) {
-        this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
-    }
+		super();
+		this.nome = nome;
+		this.preco = preco;
+		this.quantidade = quantidade;
+	}
 
-    public String getNome() { 
+	public String getNome() { 
     	return nome; 
     }
     
