@@ -14,8 +14,10 @@ public class Estoque{
 			produtos[contador] = p;
 			contador++;
 		}
-		System.out.println("O estoque está cheio!");
-		System.out.println("");
+		else{
+			System.out.println("O estoque está cheio!");
+			System.out.println("");
+		}
 	}
 	
 	public void mostrarProduto() {
