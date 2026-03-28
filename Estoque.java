@@ -17,7 +17,7 @@ public class Estoque{
 		System.out.println("O estoque está cheio!");
 	}
 	
-	public void listarProduto(Produto p) {
+	public void mostrarProduto(Produto p) {
 		for(int i=0; contador > i; i++ ) {
 			System.out.println("Nome: " + produtos[i].getNome());
             System.out.println("Preço: " + produtos[i].getPreco());
