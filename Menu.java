@@ -38,6 +38,9 @@ public class Menu {
 				case 4:
 					System.out.println("Valor total: " + estoque.valorTotal());
 					break;
+				case 0:
+					System.out.println("Encerrando o programa..");
+					break;
 				default:
 					System.out.println("Opção incorreta! Por favor tente novamente.");			}
 		} while(op != 0);
