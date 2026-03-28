@@ -1,12 +1,12 @@
 package produtos;
 
 public class Estoque{
-	private ProdutoFisico[] produtos;
+	private Produto[] produtos;
 	private int contador;
 	
 	Estoque(int tamanho){
-		this.produtos = new ProdutoFisico[tamanho];
-		this.contador = 0;
+		produtos = new Produto[tamanho];
+		contador = 0;
 	}
 	
 	public void adicionarProduto(Produto p) {
@@ -15,14 +15,13 @@ public class Estoque{
 			contador++;
 		}
 		System.out.println("O estoque está cheio!");
+		System.out.println("");
 	}
 	
-	public void mostrarProduto(Produto p) {
+	public void mostrarProduto() {
 		for(int i=0; contador > i; i++ ) {
-			System.out.println("Nome: " + produtos[i].getNome());
-            System.out.println("Preço: " + produtos[i].getPreco());
-            System.out.println("Quantidade: " + produtos[i].getQuantidade());
-            System.out.println("Valor: " + produtos[i].calcularValor());
+			produtos[i].exibirInformacoes();
+            System.out.println("-------------------");
 		}
 	}
 	
@@ -33,12 +32,15 @@ public class Estoque{
 					produtos[j] = produtos[j + 1];
 				}
 				
-				contador++;
+				contador--;
 				System.out.println("Produto removido!");
+				System.out.println("");
+				return;
 			}
 			
 		}
-		System.out.println("Produto não encontrado. O produto não está no estoque ou foi inserido o nome errado.");
+		System.out.println("Produto não encontrado. O produto não está no estoque ou foi inserido um nome que não corresponde aos que tem no estoque.");
+		System.out.println("");
 	}
 	
 	public double valorTotal() {
