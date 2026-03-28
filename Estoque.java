@@ -45,6 +45,10 @@ public class Estoque{
 		System.out.println("");
 	}
 	
+	public boolean estaCheio() {
+	    return contador >= produtos.length;
+	}
+	
 	public double valorTotal() {
 		double total = 0;
 		for(int i=0; i< contador; i++) {
