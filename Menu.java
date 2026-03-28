@@ -36,7 +36,7 @@ public class Menu {
 					estoque.mostrarProduto();
 					break;
 				case 4:
-					System.out.println("Valor total: " + estoque.valorTotal());
+					System.out.println("Valor total: R$" + estoque.valorTotal());
 					break;
 				case 0:
 					System.out.println("Encerrando o programa..");
@@ -47,6 +47,10 @@ public class Menu {
 		
 	}
 	private void adicionar() {
+		 if (estoque.estaCheio()) {
+	            System.out.println("Estoque cheio! Não é possível adicionar mais produtos.");
+	            return;
+	        }
 		sc.nextLine();
 		
 		System.out.println("Insira o nome do produto: ");
@@ -76,3 +80,4 @@ public class Menu {
 	}
 	
 }
+
