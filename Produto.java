@@ -24,10 +24,6 @@ public abstract class Produto {
     	return quantidade; 
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-    
     public void exibirInformacoes(){
         System.out.println("Nome: " + nome);
         System.out.println("Quantidade: " + quantidade);
