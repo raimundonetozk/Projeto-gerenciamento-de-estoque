@@ -16,14 +16,15 @@ public class Menu {
 		int op;
 		
 		do {
+			System.out.println("-------------------------------------------");
 			System.out.println("Escolha o que deseja gerenciar no estoque:");
-			System.out.println("1 para adicionar produto.");
-			System.out.println("2 para remover produto.");
-			System.out.println("3 para listar(mostrar) os produtos.");
-			System.out.println("4 para mostrar o valor total dos produtos.");
-			System.out.println("0 para sair");
+			System.out.println("Digite (1) para adicionar um produto no estoque.");
+			System.out.println("Digite (2) para remover um produto do estoque.");
+			System.out.println("Digite (3) para listar(mostrar) todos os produtos em estoque.");
+			System.out.println("Digite (4) para mostrar o valor total dos produtos em estoque.");
+			System.out.println("Digite (0) para sair");
 			op = sc.nextInt();
-			System.out.println("");
+			System.out.println("-------------------------------------------");
 			
 			switch(op) {
 				case 1:
@@ -36,19 +37,19 @@ public class Menu {
 					estoque.mostrarProduto();
 					break;
 				case 4:
-					System.out.println("Valor total: R$" + estoque.valorTotal());
+					System.out.printf("Valor total de todos os produtos em estoque: R$ %.2f reais\n" , estoque.valorTotal());
 					break;
 				case 0:
-					System.out.println("Encerrando o programa..");
+					System.out.println("Encerrando o programa...");
 					break;
 				default:
-					System.out.println("Opção incorreta! Por favor tente novamente.");			}
+					System.out.println("Opção inválida! Por favor tente novamente.");			}
 		} while(op != 0);
 		
 	}
 	private void adicionar() {
 		 if (estoque.estaCheio()) {
-	            System.out.println("Estoque cheio! Não é possível adicionar mais produtos.");
+	            System.out.println("O estoque está cheio! Não é possível adicionar mais produtos.");
 	            return;
 	        }
 		sc.nextLine();
@@ -78,6 +79,4 @@ public class Menu {
 		estoque.removerProduto(nome);
 		
 	}
-	
 }
-
