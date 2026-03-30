@@ -9,6 +9,10 @@ public class Estoque{
 		contador = 0;
 	}
 	
+	public boolean estaCheio() {
+	    return contador >= produtos.length;
+	}
+	
 	public void adicionarProduto(Produto p) {
 		if(contador < produtos.length) {
 			produtos[contador] = p;
@@ -43,10 +47,6 @@ public class Estoque{
 		}
 		System.out.println("Produto não encontrado. O produto não está no estoque ou foi inserido um nome que não corresponde aos que tem no estoque.");
 		System.out.println("");
-	}
-	
-	public boolean estaCheio() {
-	    return contador >= produtos.length;
 	}
 	
 	public double valorTotal() {
