@@ -5,7 +5,6 @@ public abstract class Produto {
     protected double preco;
     protected int quantidade;
 
-    
     public Produto(String nome, double preco, int quantidade) {
 		super();
 		this.nome = nome;
