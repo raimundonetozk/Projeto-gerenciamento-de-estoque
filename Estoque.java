@@ -8,7 +8,7 @@ public class Estoque{
 		produtos = new Produto[tamanho];
 		contador = 0;
 	}
-	
+
 	public boolean estaCheio() {
 	    return contador >= produtos.length;
 	}
