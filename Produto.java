@@ -11,7 +11,7 @@ public abstract class Produto {
 		this.preco = preco;
 		this.quantidade = quantidade;
 	}
-
+	
 	public String getNome() { 
     	return nome; 
     }
